@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090809">
+<meta name="description" content="SEDATED Clan — multiple games, one squad. Join the community.">
+<title>SEDATED™ | Clan HQ</title>
+<style>
+:root{--red:#f21f35;--red2:#8f091b;--bg:#080809;--panel:#111114;--line:#29292f;--muted:#aaaab4;--white:#f7f5f6;--green:#6ee7a0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#080809eF;backdrop-filter:blur(15px);border-bottom:1px solid #29292f}nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:1.65rem;font-weight:1000;font-style:italic;letter-spacing:-2px;color:var(--red);text-shadow:0 0 28px #f21f353d}.navlinks{display:flex;gap:22px;color:#d2cfd2;font-size:.88rem}.navlinks a:hover{color:var(--red)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;background:var(--red);color:white;border:1px solid var(--red);border-radius:8px;font-weight:850;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px #f21f3530}.btn.ghost{background:transparent;color:var(--red)}.btn.small{padding:8px 11px;font-size:.83rem}
+.hero{position:relative;overflow:hidden;text-align:center;min-height:460px;display:grid;place-items:center;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 50% 105%,#740b1b 0,transparent 47%),radial-gradient(ellipse at 15% 15%,#3c1018 0,transparent 27%),radial-gradient(ellipse at 90% 15%,#510714 0,transparent 25%),linear-gradient(135deg,#080809,#171014 50%,#080809)}.hero:before{content:"";position:absolute;inset:0;opacity:.28;background:repeating-linear-gradient(125deg,transparent 0 80px,#ff2438 81px,#ff2438 82px,transparent 83px 165px);mask-image:linear-gradient(90deg,#000,transparent 40%,transparent 60%,#000)}.hero-inner{position:relative;padding:76px 0}.eyebrow{color:var(--red);font-size:.75rem;font-weight:950;letter-spacing:.27em;text-transform:uppercase}h1{margin:14px 0 0;font-size:clamp(4rem,12vw,8.4rem);line-height:.88;letter-spacing:-.085em;font-weight:1000;font-style:italic;text-shadow:0 5px #490610,0 0 50px #f21f3535}.subtitle{color:#d2cbd0;letter-spacing:.25em;text-transform:uppercase;margin:24px 0 30px;font-size:.85rem}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+section{padding:62px 0}.section-head{margin-bottom:24px}h2{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.045em;margin:7px 0}.muted{color:var(--muted);line-height:1.7}.panel{background:linear-gradient(145deg,#131316,#0c0c0e);border:1px solid var(--line);border-radius:13px;padding:23px}.grid2{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{padding:17px 8px;text-align:center;background:#0a0a0c;border:1px solid #29292f;border-radius:10px}.stat strong{display:block;font-size:1.8rem;color:var(--red)}.stat span{color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.pill{display:inline-block;border:1px solid #67212b;color:#ff8590;background:#2a0c12;padding:5px 9px;border-radius:999px;font-size:.7rem;font-weight:850;letter-spacing:.08em}.list{display:grid;gap:10px}.member,.rankrow{display:flex;align-items:center;gap:12px;padding:12px;background:#0a0a0c;border:1px solid #27272d;border-radius:10px}.avatar{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#5e0c19,#19090d);border:1px solid #71202b;color:#ff9aa4;font-weight:950}.member-info{flex:1;min-width:0}.member-info strong{display:block}.member-info small{color:var(--muted)}.role{font-size:.72rem;color:#ff8a96;border:1px solid #54202a;border-radius:5px;padding:5px 7px}.empty{padding:18px;border:1px dashed #38383f;border-radius:10px;color:var(--muted);font-size:.9rem}.ranknum{font-size:1.15rem;font-weight:950;color:var(--red);width:26px;text-align:center}.rankpoints{margin-left:auto;color:#ff8792;font-size:.82rem;font-weight:850}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;color:#d5d1d5;font-weight:750}.field input,.field select,.field textarea{width:100%;background:#080809;border:1px solid #38383f;border-radius:8px;padding:12px;color:var(--white);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--red)}.field textarea{min-height:100px;resize:vertical}.note{font-size:.8rem;color:var(--muted)}.notice{padding:12px;border-radius:8px;background:#210b10;border:1px solid #63202b;color:#ffb2b9;line-height:1.5;font-size:.86rem}.discord-box{display:flex;align-items:center;justify-content:space-between;gap:18px}.online-dot{display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-right:7px;box-shadow:0 0 10px #6ee7a055}.band{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:29px;background:linear-gradient(110deg,#300811,#111114 62%,#21070d);border:1px solid #57202a;border-radius:14px}footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:.83rem}.foot{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:780px){.navlinks{display:none}.grid2{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}section{padding:45px 0}.discord-box,.band{align-items:flex-start;flex-direction:column}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<header><nav class="wrap">
+<a class="logo" href="#home">SEDATED™</a>
+<div class="navlinks"><a href="#about">About</a><a href="#roster">Roster</a><a href="#leaderboard">Rankings</a><a href="#apply">Apply</a></div>
+<a class="btn small" href="https://discord.gg/d4qU9GvCQJ" target="_blank" rel="noopener noreferrer">☻ Join Discord ↗</a>
+</nav></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner wrap">
+<div class="eyebrow">One squad · Multiple games</div><h1>SEDATED</h1><p class="subtitle">Built different. United together.</p>
+<div class="actions"><a class="btn" href="https://discord.gg/d4qU9GvCQJ" target="_blank" rel="noopener noreferrer">JOIN THE SQUAD ↗</a><a class="btn ghost" href="#roster">Meet the clan</a></div>
+</div></section>
+
+<section id="about"><div class="wrap grid2">
+<article class="panel"><div class="eyebrow">Who we are</div><h2>More than a clan.</h2><p class="muted">SEDATED is a growing gaming community for people who value teamwork, loyalty, and good vibes. We play across multiple games, welcome creative minds, and build a community where members can get involved and help shape what comes next.</p><p class="muted">Whether you play, create, test, or help run the server, there's room to contribute. Join our Discord to meet the squad and find your place.</p></article>
+<aside class="panel"><div class="eyebrow">Clan snapshot</div><div class="stats" style="margin-top:16px">
+<div class="stat"><strong id="statMembers">—</strong><span>Roster</span></div><div class="stat"><strong id="statGames">Multi</strong><span>Games</span></div><div class="stat"><strong id="statApps">—</strong><span>Applications</span></div><div class="stat"><strong id="statRanks">—</strong><span>Ranked</span></div>
+</div><p class="note">Roster, application, and ranking totals update from entries saved in this browser. They are not official Discord server analytics.</p></aside>
+</div></section>
+
+<section id="roster" style="background:#0b0b0d;border-block:1px solid #202025"><div class="wrap">
+<div class="section-head"><div class="eyebrow">The people behind the tag</div><h2>Clan roster</h2><p class="muted">Sample entries are clearly marked. Add your actual members below or edit the starter roster in this file.</p></div>
+<div class="grid2"><div class="panel"><div class="list" id="rosterList"></div></div>
+<div class="panel"><div class="eyebrow">Add a member</div><form id="memberForm" style="margin-top:14px"><div class="field"><label for="memberName">Display name</label><input id="memberName" required maxlength="32" placeholder="Member name"></div><div class="field" style="margin-top:12px"><label for="memberRole">Clan role</label><select id="memberRole"><option>Leader</option><option>Admin</option><option>Developer</option><option>Moderator</option><option>Member</option><option>Tester</option></select></div><div class="field" style="margin-top:12px"><label for="memberGame">Main game</label><input id="memberGame" maxlength="32" placeholder="e.g. Project Delta"></div><button class="btn" style="margin-top:14px" type="submit">Add to roster</button></form><p class="note">This demo saves entries in this browser only. It does not sync across visitors or devices.</p></div></div>
+</div></section>
+
+<section id="leaderboard"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Earn your place</div><h2>Rankings & leaderboard</h2><p class="muted">Example points only — replace them with your clan's real scores.</p></div>
+<div class="grid2"><div class="panel"><div id="leaderboardList" class="list"></div></div>
+<div class="panel"><div class="eyebrow">Record points</div><form id="pointsForm" style="margin-top:14px"><div class="field"><label for="rankName">Member name</label><input id="rankName" required maxlength="32" placeholder="Exact display name"></div><div class="field" style="margin-top:12px"><label for="rankPoints">Points to add</label><input id="rankPoints" required type="number" min="1" max="100000" placeholder="e.g. 25"></div><button class="btn" style="margin-top:14px" type="submit">Update points</button></form><p class="note">Leaderboard data is stored locally in this browser and is not a verified competitive ranking.</p></div></div>
+</div></section>
+
+<section id="apply" style="background:#0b0b0d;border-block:1px solid #202025"><div class="wrap grid2">
+<div><div class="eyebrow">Recruitment open</div><h2>Apply to SEDATED.</h2><p class="muted">We're looking for active players, developers, UI designers, admins, moderators, and testers. Fill in this form to prepare an application message you can send to our Discord team.</p><div class="notice">This static website cannot deliver applications to clan staff automatically. After you submit, it will prepare your application text for copying; send it to staff in Discord.</div></div>
+<div class="panel"><form id="applicationForm"><div class="formgrid">
+<div class="field"><label for="appName">Discord / display name *</label><input id="appName" required maxlength="50" placeholder="Your name"></div>
+<div class="field"><label for="appAge">Age (optional)</label><input id="appAge" inputmode="numeric" maxlength="3" placeholder="Optional"></div>
+<div class="field"><label for="appRole">Applying for *</label><select id="appRole" required><option value="">Choose a role</option><option>Member / Player</option><option>Developer</option><option>UI Designer</option><option>Admin</option><option>Moderator</option><option>Tester</option><option>Other</option></select></div>
+<div class="field"><label for="appGame">Game you play most *</label><input id="appGame" required maxlength="60" placeholder="Game title"></div>
+<div class="field full"><label for="appWhy">Why should we pick you? *</label><textarea id="appWhy" required maxlength="1000" placeholder="Tell us about yourself and how you can contribute."></textarea></div>
+<div class="field full"><button class="btn" type="submit">Prepare application ↗</button><p class="note">Your answers stay in this page until you copy or leave. Avoid including private information.</p></div>
+</div></form><div id="applicationResult" hidden style="margin-top:16px"><div class="field"><label for="applicationText">Your application message</label><textarea id="applicationText" readonly></textarea></div><div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="btn" id="copyApp" type="button">Copy application</button><a class="btn ghost" href="https://discord.gg/d4qU9GvCQJ" target="_blank" rel="noopener noreferrer">Open Discord ↗</a></div><p id="copyStatus" class="note" aria-live="polite"></p></div></div>
+</div></section>
+
+<section id="discord"><div class="wrap"><div class="band"><div><div class="eyebrow">Come through</div><h2>Meet us on Discord.</h2><p class="muted" style="margin-bottom:0">News, recruiting, community activities, and the squad all live there.</p><p class="note" id="discordStatus"><span class="online-dot"></span>Live member count is not configured yet.</p></div><a class="btn" href="https://discord.gg/d4qU9GvCQJ" target="_blank" rel="noopener noreferrer">JOIN OUR DISCORD ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><a class="logo" href="#home">SEDATED™</a><span>Play together. Grow together. Stay SEDATED.</span><span>© <span id="year"></span> SEDATED Clan</span></div></footer>
+<script>
+const INVITE = "https://discord.gg/d4qU9GvCQJ";
+
+/*
+  OPTIONAL LIVE DISCORD MEMBER COUNT:
+  A public Discord invite endpoint can sometimes return approximate counts.
+  Browser requests may be blocked by CORS, and counts are not guaranteed.
+  For a reliable live count, use a small server-side endpoint/bot and set
+  LIVE_COUNT_ENDPOINT to your own endpoint URL. Never put a bot token here.
+*/
+const LIVE_COUNT_ENDPOINT = "";
+
+const starterMembers = [
+  {name:"Clan Leader (edit me)", role:"Leader", game:"Multiple games"},
+  {name:"Admin (edit me)", role:"Admin", game:"Multiple games"},
+  {name:"Member (edit me)", role:"Member", game:"Multiple games"}
+];
+const starterPoints = [
+  {name:"Clan Leader (edit me)", points:1000},
+  {name:"Admin (edit me)", points:750},
+  {name:"Member (edit me)", points:500}
+];
+const read = (key, fallback) => { try { const v=localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch { return fallback; } };
+const save = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} };
+let members = read("sedated_members_v1", starterMembers);
+let points = read("sedated_points_v1", starterPoints);
+let appCount = Number(read("sedated_app_count_v1", 0)) || 0;
+const safe = value => String(value).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function renderRoster(){
+ const root=document.getElementById("rosterList");
+ if(!members.length){root.innerHTML='<div class="empty">No members added yet. Use the form to add your roster.</div>';}
+ else root.innerHTML=members.map(m=>`<div class="member"><div class="avatar">${safe((m.name||"?").slice(0,2).toUpperCase())}</div><div class="member-info"><strong>${safe(m.name)}</strong><small>${safe(m.game||"Multiple games")}</small></div><span class="role">${safe(m.role)}</span></div>`).join("");
+ document.getElementById("statMembers").textContent=members.length;
+}
+function renderRanks(){
+ const root=document.getElementById("leaderboardList");
+ const sorted=[...points].sort((a,b)=>b.points-a.points);
+ if(!sorted.length) root.innerHTML='<div class="empty">No ranking entries yet. Add points to get started.</div>';
+ else root.innerHTML=sorted.map((m,i)=>`<div class="rankrow"><div class="ranknum">#${i+1}</div><div class="avatar">${safe((m.name||"?").slice(0,2).toUpperCase())}</div><div class="member-info"><strong>${safe(m.name)}</strong><small>Clan leaderboard</small></div><div class="rankpoints">${Number(m.points)||0} pts</div></div>`).join("");
+ document.getElementById("statRanks").textContent=points.length;
+}
+function renderStats(){document.getElementById("statApps").textContent=appCount;renderRoster();renderRanks();}
+document.getElementById("memberForm").addEventListener("submit",e=>{
+ e.preventDefault(); const name=document.getElementById("memberName").value.trim(); if(!name)return;
+ members=members.filter(m=>m.name.toLowerCase()!==name.toLowerCase());
+ members.push({name,role:document.getElementById("memberRole").value,game:document.getElementById("memberGame").value.trim()||"Multiple games"});
+ save("sedated_members_v1",members); e.target.reset(); renderStats();
+});
+document.getElementById("pointsForm").addEventListener("submit",e=>{
+ e.preventDefault(); const name=document.getElementById("rankName").value.trim(); const add=Number(document.getElementById("rankPoints").value); if(!name||!Number.isFinite(add)||add<1)return;
+ const found=points.find(p=>p.name.toLowerCase()===name.toLowerCase());
+ if(found)found.points=(Number(found.points)||0)+add; else points.push({name,points:add});
+ save("sedated_points_v1",points); e.target.reset(); renderRanks();
+});
+document.getElementById("applicationForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const name=document.getElementById("appName").value.trim(), age=document.getElementById("appAge").value.trim(), role=document.getElementById("appRole").value, game=document.getElementById("appGame").value.trim(), why=document.getElementById("appWhy").value.trim();
+ const message=`SEDATED CLAN APPLICATION\nName: ${name}\n${age?`Age: ${age}\n`:""}Applying for: ${role}\nMain game: ${game}\nWhy should we pick you?\n${why}\n\nSent via the SEDATED website.`;
+ document.getElementById("applicationText").value=message; document.getElementById("applicationResult").hidden=false;
+ appCount++; save("sedated_app_count_v1",appCount); document.getElementById("statApps").textContent=appCount;
+});
+document.getElementById("copyApp").addEventListener("click",async()=>{
+ const text=document.getElementById("applicationText").value, status=document.getElementById("copyStatus");
+ try{await navigator.clipboard.writeText(text);status.textContent="Copied! Open Discord and send this to the clan staff.";}
+ catch{const box=document.getElementById("applicationText");box.focus();box.select();status.textContent="Select and copy the application text, then send it to clan staff in Discord.";}
+});
+async function loadDiscordCount(){
+ const status=document.getElementById("discordStatus");
+ if(!LIVE_COUNT_ENDPOINT){status.innerHTML='<span class="online-dot"></span>Live member count needs a server-side endpoint to work reliably. Join Discord to see the community.';return;}
+ try{const r=await fetch(LIVE_COUNT_ENDPOINT);if(!r.ok)throw new Error("Request failed");const data=await r.json();const count=Number(data.member_count);if(!Number.isFinite(count))throw new Error("No count field");status.innerHTML=`<span class="online-dot"></span>${count.toLocaleString()} Discord members <span class="note">(provided by clan endpoint)</span>`;}
+ catch{status.innerHTML='<span class="online-dot"></span>Member count temporarily unavailable — join Discord to check.';}
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+renderStats();loadDiscordCount();
+</script>
+</body></html>
